@@ -1,0 +1,17 @@
+<h1>Login</h1>
+{% if messages.error %}
+  {{ messages.error }}
+{% endif %}
+<form action="/user/login" method="post">
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" require="required" autocomplete="disabled">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" require="required">
+  </div>
+  <button type="submit">Login</button>
+</form>
+<a href="/user/register">Register</a>
+<a href="/user/forgotPassword">Forgot Password</a>
